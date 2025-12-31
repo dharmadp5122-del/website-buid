@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veer Travels - All India Tour Packages & Hotels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: #333; background: #f5f5f5; }
+        .header { background: white; padding: 15px 20px; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 24px; font-weight: 700; color: #0066cc; font-family: 'Poppins'; }
+        .nav { display: flex; gap: 25px; }
+        .nav a { text-decoration: none; color: #333; font-weight: 500; }
+        .nav a:hover { color: #0066cc; }
+        .header-actions { display: flex; gap: 15px; align-items: center; font-size: 14px; }
+        .whatsapp-btn { background: #25d366; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-weight: 600; }
+        .whatsapp-btn:hover { background: #20ba58; }
+        .hero {
+background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1537521539185-f1e7ce97c5f1?w=1200&h=600&fit=crop'); background-size: cover; color: white; padding: 100px 20px; text-align: center; }
+.hero h1 { font-size: 48px; margin-bottom: 20px; font-family: 'Poppins'; }
+.hero p { font-size: 18px; margin-bottom: 30px; }
+.btn { display: inline-block; padding: 10px 24px; margin: 8px; text-decoration: none; border-radius: 5px; border: none; cursor: pointer; font-weight: 600; }
+.btn-primary { background: #0066cc; color: white; }
+.btn-primary:hover { background: #0052a3; }
+.btn-secondary { background: #ff9500; color: white; }
+.btn-secondary:hover { background: #ff8c00; }
+.section { padding: 50px 20px; background: white; margin: 20px 0; }
+.section h2 { font-size: 32px; text-align: center; margin-bottom: 40px; color: #0066cc; font-family: 'Poppins'; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+.card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
+.card img { width: 100%; height: 180px; object-fit: cover; }
+.card h3 { padding: 15px 20px 0; color: #0066cc; font-family: 'Poppins'; }
+.card a { display: block; padding: 10px 20px 20px; color: #0066cc; text-decoration: none; font-weight: 600; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+.step { text-align: center; }
+.step-num { display: inline-block; width: 50px; height: 50px; background: #0066cc; color: white; border-radius: 50%; line-height: 50px; font-size: 24px; font-weight: 700; margin-bottom: 15px; }
+.step h3 { margin-bottom: 10px; font-family: 'Poppins'; }
+.floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; text-decoration: none; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 999; }
+.floating-whatsapp:hover { background: #20ba58; }
+.footer { background: #222; color: white; padding: 30px 20px; text-align: center; }
+.benefits { list-style: none; max-width: 500px; margin: 0 auto; text-align: left; font-size: 16px; }
+.benefits li { padding: 8px 0; }
+</style>
+
+</head> <body> <header class="header"> <div class="container"> <div class="header-content"> <div class="logo">🌍 VEER TRAVELS</div> <nav class="nav"> <a href="index.html">Home</a> <a href="hotels.html">Hotels</a> <a href="packages.html">Packages</a> <a href="contact.html">Contact</a> </nav> <div class="header-actions"> <span>📞 +91 9016665048</span> <button class="whatsapp-btn" onclick="openWhatsApp('Hi Veer Travels!')">WhatsApp</button> </div> </div> </div> </header>
+<section class="hero">
+    <h1>Explore India with Veer Travels</h1>
+    <p>Book Hotels | Tour Packages | Customized Itineraries</p>
+    <a href="hotels.html" class="btn btn-primary">Book Hotels</a>
+    <a href="packages.html" class="btn btn-secondary">View Packages</a>
+    <button class="btn btn-primary" onclick="openWhatsApp('I want a custom quote for my trip')">Get Custom Quote</button>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Featured Destinations</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1512453581353-83d5d814b5e6?w=400&h=300&fit=crop" alt="Kashmir">
+                <h3>Kashmir</h3>
+                <a href="kashmir.html">Explore →</a>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=300&fit=crop" alt="Rajasthan">
+                <h3>Rajasthan</h3>
+                <a href="rajasthan.html">Explore →</a>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Himachal">
+                <h3>Himachal Pradesh</h3>
+                <a href="himachal.html">Explore →</a>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1551394360-db4b3204baf5?w=400&h=300&fit=crop" alt="Goa">
+                <h3>Goa</h3>
+                <a href="goa.html">Explore →</a>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1573968487258-ceedd4a34c27?w=400&h=300&fit=crop" alt="Kerala">
+                <h3>Kerala</h3>
+                <a href="kerala.html">Explore →</a>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1569163139394-de4798aa62b3?w=400&h=300&fit=crop" alt="North East">
+                <h3>North East India</h3>
+                <a href="northeast.html">Explore →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-num">1</div>
+                <h3>Choose Package</h3>
+                <p>Browse our curated packages</p>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <h3>Fill Enquiry</h3>
+                <p>Share your preferences</p>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <h3>WhatsApp Chat</h3>
+                <p>Get personalized quotes</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>Why Choose Veer Travels?</h2>
+        <ul class="benefits">
+            <li>✓ All India Coverage</li>
+            <li>✓ Handpicked Hotels & Packages</li>
+            <li>✓ WhatsApp-First Service</li>
+            <li>✓ Customized Itineraries</li>
+            <li>✓ Best Price Guaranteed</li>
+            <li>✓ 24/7 Support</li>
+        </ul>
+    </div>
+</section>
+
+<footer class="footer">
+    <h3>VEER TRAVELS</h3>
+    <p>📞 +91 9016665048 | All India Tours</p>
+    <p>&copy; 2024 Veer Travels</p>
+</footer>
+
+<a href="javascript:void(0)" class="floating-whatsapp" onclick="openWhatsApp('Hi, I want to inquire')">💬</a>
+
+<script>
+    function openWhatsApp(msg) {
+        window.open(`https://wa.me/919016665048?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+</script>
+</body> </html> ```
