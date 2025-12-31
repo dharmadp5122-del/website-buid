@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Veer Travels</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: #333; background: #f5f5f5; }
+        .header { background: white; padding: 15px 20px; position: sticky; top: 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 100; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+        .logo { font-size: 24px; font-weight: 700; color: #0066cc; font-family: 'Poppins'; }
+        .nav { display: flex; gap: 25px; }
+        .nav a { text-decoration: none; color: #333; font-weight: 500; }
+        .nav a:hover { color: #0066cc; }
+        .header-actions { display: flex; gap: 15px; align-items: center; font-size: 14px; }
+        .whatsapp-btn { background: #25d366; color: white; border: none; padding: 8px 16px; border-radius: 5px; cursor: pointer; font-weight: 600; }
+        .page-section { padding: 50px 20px; background: white; margin: 20px 0; }
+        .page-section h1 { font-size: 32px; color: #0066cc; margin-bottom: 30px; font-family: 'Poppins'; }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .form-container { }
+        .form { background: #f9f9f9; padding: 30px; border-radius: 8px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .btn-submit { background: #0066cc; color: white; padding: 10px 24px; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
+        .btn-submit:hover { background: #0052a3; }
+        .info-section h3 { color: #0066cc; margin-bottom: 15px; font-family: 'Poppins'; }
+        .info-item { margin-bottom: 20px; }
+        .info-item p { color: #666; line-height: 1.8; }
+        .floating-whatsapp { position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px; background: #25d366; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; z-index: 999; }
+        .footer { background: #222; color: white; padding: 30px 20px; text-align: center; }
+        @media (max-width: 768px) { .contact-content { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">🌍 VEER TRAVELS</div>
+                <nav class="nav">
+                    <a href="index.html">Home</a>
+                    <a href="hotels.html">Hotels</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+                <div class="header-actions">
+                    <span>📞 +91 9016665048</span>
+                    <button class="whatsapp-btn" onclick="openWhatsApp('Hi!')">WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-section">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <div class="contact-content">
+                <div class="form-container">
+                    <form class="form" id="contactForm">
+                        <div class="form-group">
+                            <label>Name *</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Mobile Number *</label>
+                            <input type="tel" id="mobile" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Message *</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">Send on WhatsApp</button>
+                    </form>
+                </div>
+                <div class="info-section">
+                    <h3>📞 Contact Information</h3>
+                    <div class="info-item">
+                        <p><strong>WhatsApp:</strong> +91 9016665048</p>
+                    </div>
+                    <div class="info-item">
+                        <p><strong>Phone:</strong> +91 9016665048</p>
+                    </div>
+                    <div class="info-item">
+                        <p><strong>Email:</strong> hello@veertravels.com</p>
+                    </div>
+                    <h3>🌐 Service Area</h3>
+                    <p>We cover all major destinations across India including Kashmir, Rajasthan, Himachal Pradesh, Kerala, Goa, North East India, and South India.</p>
+                    <h3>⏰ Hours</h3>
+                    <p>Available 24/7 on WhatsApp for your travel queries and bookings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h3>VEER TRAVELS</h3>
+        <p>📞 +91 9016665048 | All India Tours</p>
+        <p>&copy; 2024 Veer Travels</p>
+    </footer>
+
+    <a href="javascript:void(0)" class="floating-whatsapp" onclick="openWhatsApp('Hi!')">💬</a>
+
+    <script>
+        function openWhatsApp(msg) {
+            window.open(`https://wa.me/919016665048?text=${encodeURIComponent(msg)}`, '_blank');
+        }
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const msg = `Hello Veer Travels,\n\nNew Contact Enquiry:\nName: ${document.getElementById('name').value}\nPhone: ${document.getElementById('mobile').value}\nEmail: ${document.getElementById('email').value}\nMessage: ${document.getElementById('message').value}\n\nPlease contact me soon.`;
+            openWhatsApp(msg);
+        });
+    </script>
+</body>
+</html>
